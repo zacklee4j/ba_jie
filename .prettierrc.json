@@ -1,6 +1,6 @@
 
 {
-  "name": "my-project",
+  "name": "bajie_app",
   "prettier": {
     "printWidth": 80,
     "tabWidth": 2,
@@ -10,7 +10,6 @@
     "parser": "typescript",
     "arrowParens": "avoid",
     "bracketSpacing": true, 
-  "jsxBracketSameLine": false, 
-  "proseWrap": "preserve"
+  "jsxBracketSameLine": false
   }
 }
