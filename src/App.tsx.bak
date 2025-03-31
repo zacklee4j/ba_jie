@@ -1,0 +1,77 @@
+import React from "react";
+import { MouseEvent } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+function App() {
+  //const aa = 'aa'
+  const fn = (event: MouseEvent<HTMLButtonElement>, name: string) => {
+    event.preventDefault();
+    console.log("你好", name);
+  };
+  const flag = false;
+  function F1() {
+    if (flag) {
+      return <p>hello</p>;
+    } else {
+      return <p>not hello</p>;
+    }
+  }
+  const list = [
+    { username: "zhangsan", name: "张三" },
+    { username: "lisi", name: "李四" },
+    { username: "wangwu", name: "王五" },
+  ];
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>{logo}</p>
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <div>
+          {list.map((user) => {
+            const { username, name } = user;
+            return <li key={username}>{name}</li>;
+          })}
+        </div>
+        {/*true ? "100" : "200"*/}
+        {/*
+        
+        这是一条注释
+        
+        */}
+
+        <p>hellow world!</p>
+        <div>{flag && <p>hello</p>}</div>
+        <div>{flag ? <p>hello</p> : <p>not hello</p>}</div>
+        <F1></F1>
+        <div>
+          <label htmlFor="input1">姓 011 546f 0 名</label>
+          <input id="input1" />
+        </div>
+        <div>
+          <button
+            onClick={(event) => {
+              fn(event, "xiaoli");
+            }}
+          >
+            click
+          </button>
+        </div>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ backgroundColor: "white", color: "red" }}
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;

@@ -1,26 +1,49 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
+import { useState } from "react";
+import List1 from "./List1";
+import List2 from "./List2";
+import Demo from "./StateDemo";
+import Demo1 from "./StateDemo1";
+import ImmerDemo from "./ImmerDemo";
 function App() {
-  //const aa = 'aa'
+  let oricount = 0;
+  function oriCountAdd() {
+    oricount++;
+    console.log("oricount--->" + oricount);
+  }
+  // 使用react内置的hooks
+  const [conbineCount, setconbineCount] = useState(0);
+  function conbineCountAdd() {
+    setconbineCount(conbineCount + 1);
+    setconbineCount(conbineCount + 1);
+    setconbineCount(conbineCount + 1);
+    setconbineCount(conbineCount + 1);
+    console.log("newcount--->" + conbineCount);
+  }
+  const [count, setCount] = useState(0);
+  function newCountAdd() {
+    setCount((count) => count + 1);
+    console.log("newcount--->" + count);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/*<List1 />*/}
+      <div>
+        <button onClick={oriCountAdd}>oricount_click {oricount}</button>
+        <button onClick={newCountAdd}>newcount_click {count}</button>
+        <Demo />
+        <button onClick={conbineCountAdd}>newcount_click {conbineCount}</button>
+        <Demo1 />
+      </div>
+      <div>
+        <List1 />
+      </div>
+      <div>
+        <List2 />
+      </div>
+      <div>
+        <ImmerDemo />
+      </div>
+    </>
   );
 }
 
