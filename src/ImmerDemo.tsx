@@ -1,10 +1,8 @@
-import { produce } from "immer";
-import { FC, useState } from "react";
+import { produce } from "immer"
+import { FC, useState } from "react"
 
 const ImmerDemo: FC = () => {
-  const [userInfo, setUserInfo] = useState([
-    { id: "2q0", title: "问卷样式", isPublished: true },
-  ]);
+  const [userInfo, setUserInfo] = useState([{ id: "2q0", title: "问卷样式", isPublished: true }])
   //function changeInfo(){
   //setUserInfo(produce(draft=>{
   //  draft.title = 'immer-title'
@@ -12,14 +10,14 @@ const ImmerDemo: FC = () => {
   //}
   function addItem() {
     setUserInfo(
-      produce((draft) => {
+      produce(draft => {
         draft.push({
           id: "2q0",
           title: "immer-增加问卷样式",
           isPublished: true,
-        });
-      }),
-    );
+        })
+      })
+    )
   }
   return (
     <div>
@@ -28,7 +26,7 @@ const ImmerDemo: FC = () => {
       <button> 通过immer修改数据</button>
       <button onClick={addItem}> 通过immer修改数据</button>
     </div>
-  );
-};
+  )
+}
 
-export default ImmerDemo;
+export default ImmerDemo

@@ -1,28 +1,28 @@
-import { useState } from "react";
-import List1 from "./List1";
-import List2 from "./List2";
-import Demo from "./StateDemo";
-import Demo1 from "./StateDemo1";
-import ImmerDemo from "./ImmerDemo";
+import { useState } from "react"
+import List1 from "./List1"
+import List2 from "./List2"
+import Demo from "./StateDemo"
+import Demo1 from "./StateDemo1"
+import ImmerDemo from "./ImmerDemo"
 function App() {
-  let oricount = 0;
+  let oricount = 0
   function oriCountAdd() {
-    oricount++;
-    console.log("oricount--->" + oricount);
+    oricount++
+    console.log("oricount--->" + oricount)
   }
   // 使用react内置的hooks
-  const [conbineCount, setconbineCount] = useState(0);
+  const [conbineCount, setconbineCount] = useState(0)
   function conbineCountAdd() {
-    setconbineCount(conbineCount + 1);
-    setconbineCount(conbineCount + 1);
-    setconbineCount(conbineCount + 1);
-    setconbineCount(conbineCount + 1);
-    console.log("newcount--->" + conbineCount);
+    setconbineCount(conbineCount + 1)
+    setconbineCount(conbineCount + 1)
+    setconbineCount(conbineCount + 1)
+    setconbineCount(conbineCount + 1)
+    console.log("newcount--->" + conbineCount)
   }
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
   function newCountAdd() {
-    setCount((count) => count + 1);
-    console.log("newcount--->" + count);
+    setCount(count => count + 1)
+    console.log("newcount--->" + count)
   }
   return (
     <>
@@ -44,7 +44,7 @@ function App() {
         <ImmerDemo />
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

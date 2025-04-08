@@ -1,17 +1,13 @@
-
 {
-  "name": "bajie_app",
-  "prettier": {
-    "printWidth": 80,
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": false,
-    "trailingComma": "latest", 
-    "parser": "typescript",
-    "arrowParens": "avoid",
-    "bracketSpacing": true, 
-  "jsxBracketSameLine": false,
-  "no-unused-vars": "off",
-  "no-unused-expressions":"off"
-  }
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxSingleQuote": false,
+  "arrowParens": "avoid",
+  "proseWrap": "always",
+  "no-undef":"off"
 }

@@ -1,15 +1,15 @@
-import { FC, useState } from "react";
+import { FC, useState } from "react"
 const Demo1: FC = () => {
-  const [userInfo, setUserInfo] = useState({ name: "书蓉", age: 20 });
+  const [userInfo, setUserInfo] = useState({ name: "书蓉", age: 20 })
   function changeName() {
     setUserInfo({
       ...userInfo, // 解构处理，不需要写完所有值
       age: 21,
-    });
+    })
   }
-  const [list, setList] = useState(["x", "y"]);
+  const [list, setList] = useState(["x", "y"])
   function addItem() {
-    setList([...list, "z|z"]);
+    setList([...list, "z|z"])
   }
   return (
     <div>
@@ -19,7 +19,7 @@ const Demo1: FC = () => {
       <div>{JSON.stringify(list)}</div>
       <button onClick={addItem}> 点击可以让-增加数组</button>
     </div>
-  );
-};
+  )
+}
 
-export default Demo1;
+export default Demo1

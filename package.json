@@ -24,7 +24,13 @@
     "eject": "react-scripts eject",
     "lint": " eslint \"src/**/*.+(js|ts|jsx|tsx)\" ",
     "format": " prettier --write \"src/**/*.+(js|ts|jsx|tsx)\" ",
-    "prepare": "husky"
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -48,9 +54,9 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.21.0",
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
-    "@typescript-eslint/parser": "^8.26.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.2",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
